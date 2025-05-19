@@ -1,0 +1,31 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.37.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           haskell-scraper
+version:        0.1
+stability:      unstable
+author:         Benjamin Weber <one@bwe.im>
+maintainer:     Benjamin Weber <one@bwe.im>
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+
+executable haskell-scraper
+  main-is: app/Main.hs
+  other-modules:
+      Paths_haskell_scraper
+  default-extensions:
+      OverloadedStrings OverloadedRecordDot DuplicateRecordFields DeriveAnyClass RecordWildCards DuplicateRecordFields TypeFamilies DataKinds DerivingStrategies
+  ghc-options: -threaded -rtsopts -with-rtsopts=+RTS -with-rtsopts=-T
+  build-depends:
+      base >=4.17.0.0
+    , bytestring
+    , criterion
+    , criterion-measurement
+    , pretty-simple
+    , scalpel
+    , text
+  default-language: GHC2021

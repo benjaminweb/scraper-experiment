@@ -1,0 +1,39 @@
+name: haskell-scraper
+version: 0.1
+author: Benjamin Weber <one@bwe.im>
+stability: unstable
+
+dependencies:
+    - base >=4.17.0.0
+    - scalpel
+    - pretty-simple
+    - bytestring
+    - text
+    - criterion
+    - criterion-measurement
+
+language: GHC2021
+
+default-extensions:
+    OverloadedStrings
+    OverloadedRecordDot
+    DuplicateRecordFields
+    DeriveAnyClass
+    RecordWildCards
+    DuplicateRecordFields
+    TypeFamilies
+    DataKinds
+    DerivingStrategies
+
+executable:
+    main: app/Main.hs
+    dependencies:
+    - scalpel
+    - bytestring
+    - criterion
+    - criterion-measurement
+    ghc-options:
+        -threaded
+        -rtsopts
+        -with-rtsopts=+RTS
+        -with-rtsopts=-T

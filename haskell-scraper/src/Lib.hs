@@ -1,5 +1,5 @@
 {-# LANGUAGE OverloadedStrings #-}
-module Main where
+module Lib where
 
 import Text.HTML.Scalpel
 import Text.Pretty.Simple
@@ -20,7 +20,3 @@ scraper = do
   gcs <- getGCStatistics
   let pma = maybe "" (show . gcStatsPeakMegabytesAllocated) gcs
   putStrLn $ "peak memory allocated in MB: " ++ pma
-
-main :: IO ()
-main = do
- defaultMain [ bench "whnfIO scalpel scraper" $ whnfIO (scraper)]

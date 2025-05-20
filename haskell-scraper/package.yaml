@@ -25,15 +25,37 @@ default-extensions:
     DataKinds
     DerivingStrategies
 
-executable:
-    main: app/Main.hs
-    dependencies:
-    - scalpel
-    - bytestring
-    - criterion
-    - criterion-measurement
-    ghc-options:
-        -threaded
-        -rtsopts
-        -with-rtsopts=+RTS
-        -with-rtsopts=-T
+source-dirs:
+    - src
+
+library:
+    exposed-modules: Lib
+
+executables:
+    time-it:
+        source-dirs: time-it
+        main: Main.hs
+        dependencies:
+        - scalpel
+        - bytestring
+        - criterion
+        - criterion-measurement
+        ghc-options:
+            -threaded
+            -rtsopts
+            -with-rtsopts=+RTS
+            -with-rtsopts=-T
+    memory-it:
+        source-dirs: memory-it
+        main: Main.hs
+        dependencies:
+        - scalpel
+        - bytestring
+        - criterion
+        - criterion-measurement
+        ghc-options:
+            -threaded
+            -rtsopts
+            -with-rtsopts=+RTS
+            -with-rtsopts=-T
+

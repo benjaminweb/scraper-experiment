@@ -45,7 +45,7 @@ executables:
             -rtsopts
             -with-rtsopts=+RTS
             -with-rtsopts=-T
-    memory-it:
+    memory-it-t:
         source-dirs: memory-it
         main: Main.hs
         dependencies:
@@ -58,4 +58,17 @@ executables:
             -rtsopts
             -with-rtsopts=+RTS
             -with-rtsopts=-T
+    memory-it-s:
+        source-dirs: memory-it
+        main: Main.hs
+        dependencies:
+        - scalpel
+        - bytestring
+        - criterion
+        - criterion-measurement
+        ghc-options:
+            -threaded
+            -rtsopts
+            -with-rtsopts=+RTS
+            -with-rtsopts=-s
 

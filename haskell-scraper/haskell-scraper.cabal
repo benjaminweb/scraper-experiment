@@ -30,7 +30,28 @@ library
     , text
   default-language: GHC2021
 
-executable memory-it
+executable memory-it-s
+  main-is: Main.hs
+  other-modules:
+      Lib
+      Paths_haskell_scraper
+  hs-source-dirs:
+      src
+      memory-it
+  default-extensions:
+      OverloadedStrings OverloadedRecordDot DuplicateRecordFields DeriveAnyClass RecordWildCards DuplicateRecordFields TypeFamilies DataKinds DerivingStrategies
+  ghc-options: -threaded -rtsopts -with-rtsopts=+RTS -with-rtsopts=-s
+  build-depends:
+      base >=4.17.0.0
+    , bytestring
+    , criterion
+    , criterion-measurement
+    , pretty-simple
+    , scalpel
+    , text
+  default-language: GHC2021
+
+executable memory-it-t
   main-is: Main.hs
   other-modules:
       Lib

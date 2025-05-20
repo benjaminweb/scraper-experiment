@@ -6,5 +6,7 @@
 - Haskell, scalpel:
   - peak memory allocation: 130 MB, runtime: 160 ms
   - run:
-    - `cabal run memory-it`
+    - `cabal run memory-it-t`
+    - `cabal run memory-it-s`
+    - `time cabal run memory-it-t`
     - `cabal run time-it`

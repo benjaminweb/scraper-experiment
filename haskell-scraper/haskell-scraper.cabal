@@ -40,7 +40,7 @@ executable memory-it-s
       memory-it
   default-extensions:
       OverloadedStrings OverloadedRecordDot DuplicateRecordFields DeriveAnyClass RecordWildCards DuplicateRecordFields TypeFamilies DataKinds DerivingStrategies
-  ghc-options: -threaded -rtsopts -with-rtsopts=+RTS -with-rtsopts=-s
+  ghc-options: -threaded -rtsopts -with-rtsopts=+RTS -with-rtsopts=-s -O2
   build-depends:
       base >=4.17.0.0
     , bytestring
@@ -61,7 +61,7 @@ executable memory-it-t
       memory-it
   default-extensions:
       OverloadedStrings OverloadedRecordDot DuplicateRecordFields DeriveAnyClass RecordWildCards DuplicateRecordFields TypeFamilies DataKinds DerivingStrategies
-  ghc-options: -threaded -rtsopts -with-rtsopts=+RTS -with-rtsopts=-T
+  ghc-options: -threaded -rtsopts -with-rtsopts=+RTS -with-rtsopts=-T -O2
   build-depends:
       base >=4.17.0.0
     , bytestring
@@ -82,7 +82,7 @@ executable time-it
       time-it
   default-extensions:
       OverloadedStrings OverloadedRecordDot DuplicateRecordFields DeriveAnyClass RecordWildCards DuplicateRecordFields TypeFamilies DataKinds DerivingStrategies
-  ghc-options: -threaded -rtsopts -with-rtsopts=+RTS -with-rtsopts=-T
+  ghc-options: -threaded -rtsopts -with-rtsopts=+RTS -with-rtsopts=-T -O2
   build-depends:
       base >=4.17.0.0
     , bytestring

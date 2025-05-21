@@ -12,9 +12,8 @@ import GHC.Stats as GHC
 import System.Mem
 import qualified Data.Text.Encoding as T
 
-scraper :: IO ()
-scraper = do
-  html <- B.readFile "../amazon.com.html"
+scraper :: B.ByteString -> IO ()
+scraper html = do
   _ <- performMajorGC
   let res = scrapeStringLike (T.decodeUtf8 html) $ texts "h2"
   pPrint res

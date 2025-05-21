@@ -1,8 +1,8 @@
 # Benchmarking Scraping Frameworks
 
 - Rust, scraper:
-  - peak memory allocation: 3 MB, runtime: 70 ms
-  - run: `cargo run`
+  - peak memory allocation: 3 MB, runtime: 4.7 ms
+  - run: `cargo run --release`
 - Haskell, scalpel (using `html-parse`)
   - peak memory allocation: 13 MB, runtime: 10.8 ms
   - run:

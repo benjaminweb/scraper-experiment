@@ -1,0 +1,16 @@
+ignore-project: False
+library-profiling: False
+tests: True
+write-ghc-environment-files: always
+
+source-repository-package
+  type: git
+  location: https://github.com/benjaminweb/scalpel
+  subdir: scalpel
+  tag: master
+
+source-repository-package
+  type: git
+  location: https://github.com/benjaminweb/scalpel
+  subdir: scalpel-core
+  tag: master

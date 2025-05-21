@@ -10,12 +10,13 @@ import Criterion.Main
 import Criterion.Measurement
 import GHC.Stats as GHC
 import System.Mem
+import qualified Data.Text.Encoding as T
 
 scraper :: IO ()
 scraper = do
   html <- B.readFile "../amazon.com.html"
   _ <- performMajorGC
-  let res = scrapeStringLike html $ texts "h2"
+  let res = scrapeStringLike (T.decodeUtf8 html) $ texts "h2"
   pPrint res
   gcs <- getGCStatistics
   let pma = maybe "" (show . gcStatsPeakMegabytesAllocated) gcs
